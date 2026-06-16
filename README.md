@@ -1,33 +1,64 @@
 # Sudoku Solver
 
-A simple Sudoku Solver web app built with plain HTML, CSS and JavaScript.
-This is **Task 3** of my SkillCraft Technology Software Development Internship.
+A simple Sudoku Solver web application built using HTML, CSS, and JavaScript.
 
-You can type your own puzzle (or load a sample) and the app solves it using a
-backtracking algorithm. There is also a Visual Solve mode that animates the
-backtracking step by step so you can watch how it works.
+This project was developed as **Task 3** of the **SkillCraft Technology Software Development Internship**.
+
+The application allows users to enter Sudoku puzzles manually, load a sample puzzle, solve instantly using a backtracking algorithm, or watch the solving process step-by-step through Visual Solve mode.
+
+## Live Demo
+
+Add your GitHub Pages link here after deployment.
+
+Example:
+
+`https://armaan0047.github.io/SCT_SD_3/`
+
+---
 
 ## Features
 
-- Interactive 9x9 grid
-- Type numbers manually (only 1-9 allowed)
-- **Solve** button - solves the puzzle instantly
-- **Visual Solve** button - animates the backtracking
-- **Sample** button - loads an example puzzle
-- **Clear** button - empties the board
-- Invalid puzzle detection (highlights clashing cells)
-- "No solution" detection for unsolvable puzzles
-- Success message when solved
-- Solve time display (in milliseconds)
-- Filled cells counter
-- Dark mode toggle (remembers your choice)
-- Responsive layout for phones and desktops
+* Interactive 9x9 Sudoku grid
+* Manual puzzle entry
+* Solve puzzle instantly
+* Visual Solve animation
+* Sample puzzle loader
+* Clear board functionality
+* Invalid puzzle detection
+* Unsolvable puzzle detection
+* Success message after solving
+* Solve time display
+* Filled cells counter
+* Dark mode toggle
+* Responsive design for desktop and mobile devices
 
-## How to run
+---
 
-No installation needed. Just open `index.html` in any web browser.
+## Screenshots
 
-```
+### Main Interface
+
+Add screenshot here.
+
+### Visual Solve Mode
+
+Add screenshot here.
+
+---
+
+## How to Run
+
+No installation required.
+
+Simply open:
+
+`index.html`
+
+in any modern web browser.
+
+Project Structure:
+
+```text
 SCT_SD_3/
 ├── index.html
 ├── css/style.css
@@ -37,27 +68,40 @@ SCT_SD_3/
 └── .gitignore
 ```
 
-## How it works
+## Algorithm
 
-The solver uses a classic **backtracking algorithm**:
+The solver uses the classic Backtracking Algorithm:
 
 1. Find the first empty cell.
-2. Try the digits 1-9 in that cell.
-3. If a digit is allowed (no clash in the row, column or 3x3 box), place it and
-   move on to the next empty cell.
-4. If we get stuck, remove the digit (backtrack) and try the next one.
+2. Try digits 1–9.
+3. Validate against row, column, and 3×3 box rules.
+4. Move to the next empty cell.
+5. If no valid number exists, backtrack and try another value.
 
-Both Solve and Visual Solve use the **same** solving function. The solver records
-every step it takes into a list. Normal Solve just shows the final answer, while
-Visual Solve replays that list of steps with a small delay so you can see each
-placement and each backtrack.
+Both Solve and Visual Solve use the same solving logic.
 
-## Tech used
+The Visual Solve feature records each placement and backtrack step, then replays those steps as an animation so users can understand how the algorithm works.
 
-- HTML
-- CSS
-- JavaScript (vanilla, no frameworks)
+---
+
+## Technologies Used
+
+* HTML5
+* CSS3
+* JavaScript (Vanilla JS)
+
+---
+
+## Internship Information
+
+Organization: SkillCraft Technology
+
+Track: Software Development Internship
+
+Task: SCT_SD_3 – Sudoku Solver
+
+---
 
 ## Author
 
-Made by a first-year BTech student for the SkillCraft Technology internship.
+Developed by Armaan as part of the SkillCraft Technology Internship.
