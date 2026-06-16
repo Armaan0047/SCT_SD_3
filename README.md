@@ -38,11 +38,11 @@ https://armaan0047.github.io/SCT_SD_3/
 
 ### Main Interface
 
-(image.png)
+![](image.png)
 
 ### Visual Solve Mode
 
-(image1.png)
+![](image1.png)
 
 ---
 
