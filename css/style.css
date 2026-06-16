@@ -1,0 +1,211 @@
+/* Sudoku Solver styles */
+
+:root {
+  --bg: #f2f4f8;
+  --card: #ffffff;
+  --text: #222222;
+  --grid-line: #34495e;
+  --cell-bg: #ffffff;
+  --given: #2c3e50;
+  --accent: #3498db;
+  --accent-text: #ffffff;
+  --selected: #d6eaff;
+  --placing: #c8f7c5;
+  --removing: #ffd6d6;
+  --invalid: #ffb3b3;
+  --muted: #888888;
+}
+
+body.dark {
+  --bg: #1e1e2a;
+  --card: #2a2a3a;
+  --text: #f0f0f0;
+  --grid-line: #cccccc;
+  --cell-bg: #33334a;
+  --given: #ffffff;
+  --accent: #5dade2;
+  --accent-text: #1e1e2a;
+  --selected: #3b5168;
+  --placing: #2e7d32;
+  --removing: #8c2f2f;
+  --invalid: #a83232;
+  --muted: #aaaaaa;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  padding: 20px 10px;
+}
+
+.container {
+  max-width: 520px;
+  margin: 0 auto;
+  background: var(--card);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  margin: 0;
+  font-size: 26px;
+}
+
+.subtitle {
+  color: var(--muted);
+  margin-top: 4px;
+}
+
+.theme-btn {
+  background: none;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border: 3px solid var(--grid-line);
+  margin: 15px 0;
+}
+
+.cell {
+  width: 100%;
+  height: 100%;
+  border: 1px solid var(--grid-line);
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--given);
+  background: var(--cell-bg);
+  outline: none;
+  padding: 0;
+}
+
+/* Thicker lines to separate the 3x3 boxes */
+.cell.box-right {
+  border-right: 3px solid var(--grid-line);
+}
+
+.cell.box-bottom {
+  border-bottom: 3px solid var(--grid-line);
+}
+
+.cell:focus,
+.cell.selected {
+  background: var(--selected);
+}
+
+.cell.placing {
+  background: var(--placing);
+}
+
+.cell.removing {
+  background: var(--removing);
+}
+
+.cell.invalid {
+  background: var(--invalid);
+}
+
+/* Buttons */
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
+.buttons button {
+  flex: 1 1 auto;
+  min-width: 100px;
+  padding: 10px;
+  font-size: 15px;
+  border: none;
+  border-radius: 6px;
+  background: var(--accent);
+  color: var(--accent-text);
+  cursor: pointer;
+}
+
+.buttons button:hover {
+  opacity: 0.9;
+}
+
+.buttons button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Messages */
+.message {
+  text-align: center;
+  font-weight: bold;
+  min-height: 22px;
+  margin: 12px 0;
+}
+
+.message.success {
+  color: #2e7d32;
+}
+
+.message.error {
+  color: #c0392b;
+}
+
+body.dark .message.success {
+  color: #7CFC9A;
+}
+
+body.dark .message.error {
+  color: #ff8a8a;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-around;
+  font-size: 15px;
+}
+
+.footer {
+  text-align: center;
+  color: var(--muted);
+  font-size: 13px;
+  margin-top: 16px;
+}
+
+/* Small screens */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 22px;
+  }
+
+  .cell {
+    font-size: 16px;
+  }
+
+  .buttons button {
+    min-width: 70px;
+    font-size: 14px;
+  }
+}
