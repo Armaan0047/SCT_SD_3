@@ -12,7 +12,7 @@ Add your GitHub Pages link here after deployment.
 
 Example:
 
-`https://armaan0047.github.io/SCT_SD_3/`
+https://armaan0047.github.io/SCT_SD_3/
 
 ---
 
@@ -38,11 +38,11 @@ Example:
 
 ### Main Interface
 
-Add screenshot here.
+(image.png)
 
 ### Visual Solve Mode
 
-Add screenshot here.
+(image1.png)
 
 ---
 
