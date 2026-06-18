@@ -8,10 +8,6 @@ The application allows users to enter Sudoku puzzles manually, load a sample puz
 
 ## Live Demo
 
-Add your GitHub Pages link here after deployment.
-
-Example:
-
 https://armaan0047.github.io/SCT_SD_3/
 
 ---
